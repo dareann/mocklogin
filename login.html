@@ -15,6 +15,7 @@
   <br><br>
   <input type="submit">
   <input type="hidden" name="target" value="">
+  <input type="hidden" name="samlart" value="">
 </form>
 <script>
 function myFunction() {
@@ -30,8 +31,20 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 var foo = getParameterByName('target');
-alert(foo);
 document.forms[0].target.value= foo;
+
+function makeid(length) {
+   var result           = '';
+   var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+   var charactersLength = characters.length;
+   for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+   }
+   return result;
+}
+console.log(makeid(5));
+alert(makeid(64));
+document.forms[0].samlart.value= makeid;
 </script>
 </body>
 </html>
