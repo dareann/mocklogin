@@ -14,7 +14,7 @@
   </select>
   <br><br>
   <input type="submit">
-  <input type="hidden" name="Target" value="">
+  <input type="hidden" name="target" value="">
 </form>
 <script>
 function myFunction() {
@@ -31,6 +31,7 @@ function getParameterByName(name, url) {
 }
 var foo = getParameterByName('Target');
 alert(foo);
+document.forms[0].target.value= foo;
 </script>
 </body>
 </html>
