@@ -29,7 +29,7 @@ function getParameterByName(name, url) {
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
-var foo = getParameterByName('Target');
+var foo = getParameterByName('target');
 alert(foo);
 document.forms[0].target.value= foo;
 </script>
