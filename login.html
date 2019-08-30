@@ -9,7 +9,7 @@
   Username: <input type="text" id="myText" value="">
   <input type="submit">
   <input type="hidden" name="target" value="">
-  <input type="hidden" name="samlart" value="makeid">
+  <input type="hidden" name="samlart" id="samlart" value="makeid">
 </form>
 <script>
 function myFunction() {
@@ -37,8 +37,8 @@ function makeid(length) {
    return result;
 }
 console.log(makeid(5));
-val = makeid(64);
-document.forms[0].samlart.value = val ;
+var val = makeid(64);
+document.getElementById("samlart").value = val;
 </script>
 </body>
 </html>
