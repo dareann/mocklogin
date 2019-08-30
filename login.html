@@ -11,10 +11,12 @@
   <input type="hidden" name="target" value="">
   <input type="hidden" name="samlart" id="samlart" value="makeid">
 </form>
+  
 <script>
 function myFunction() {
   document.getElementById("myForm").submit();
 }
+  
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, '\\$&');
@@ -25,7 +27,6 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 var foo = getParameterByName('target');
-document.forms[0].target.value= foo;
 
 function makeid(length) {
    var result           = '';
@@ -39,6 +40,7 @@ function makeid(length) {
 console.log(makeid(5));
 var val = makeid(64);
 document.getElementById("samlart").value = val;
+document.forms[0].action= foo;
 </script>
 </body>
 </html>
